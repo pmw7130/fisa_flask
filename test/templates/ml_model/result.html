@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>분석 결과</h1>
+<img src="{{filename}}" >
+
+
+{% for k, v in result.items() %}
+    <p>
+        {{ k }} : {{ v }}
+    </p>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,18 @@
+# CASCADE 옵션이 제대로 동작하는지 확인 (FLASK SHELL에서는 확인 불가했음)
+ - sqlite로는 되는데 orm을 통해 동작하는 서비스 말단에서는 안됨
+ - cascade="delete" 를 Relationship에 걸어서 해결
+
+# 댓글에 수정/삭제 옵션을 권한이 있는 사람(로그인한 사용자가 글쓴이일 때)에게만 허가 (인가)
+ - M / T 템플릿 완성 / V 
+ - Model은 변경사항이 필요 없음
+ - 로직은 일치하나, answer는 answer/id를 호출해서 수정 및 삭제 구현 
+
+# form_errors.html을 include하고 있지 않은 화면들에 대해 화면 추가
+ -
+ 
+
+# 1. docker hub에 id/flask_app:1 로 업로드
+
+# 2. aws 서버에 ec2 컨테이너 만들어서 docker run - env 파일은 손수 작성하셔야 할 겁니다 
+
+docker run --env-file=.env -d -p 80:80 flask_app
